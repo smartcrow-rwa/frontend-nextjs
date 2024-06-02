@@ -12,7 +12,7 @@ const Home = () => (
   
 	  <div className='flex'>
 			<>
-			<a href="https://www.smartcrow.info/">
+			<a href="https://scv1-docs.vercel.app/docs/intro/">
 				  <button
 					type='button'
 					className='black_btn about'
