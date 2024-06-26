@@ -134,8 +134,8 @@ function delay(ms) {
     // Call the contract to Send request to Chainlink functions and update
     await sendRequestChainlinkSubscription(APN, senderwallet, receiverwallet);
 
-        // Wait for 20 seconds
-        await delay(20000);
+        // Wait for 60 seconds
+        await delay(60000);
 
     // await withdrawSenderFunds(APN, senderwallet, receiverwallet);
 
@@ -188,8 +188,8 @@ function delay(ms) {
     // Call the contract to Send request to Chainlink functions and update
     await sendRequestChainlinkSubscription(APN, senderwallet, receiverwallet);
 
-            // Wait for 20 seconds
-            await delay(20000);
+            // Wait for 60 seconds
+            await delay(60000);
 
     // await withdrawReceiverFunds(APN, senderwallet, receiverwallet);
     
