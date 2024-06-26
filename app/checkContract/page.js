@@ -346,7 +346,7 @@ export default function Home() {
 				</div>
 			  </section>
 			  <footer className="flex justify-start pt-5">
-				<a href="https://www.smartcrow.info" className="m-2 font-semibold text-default-bt-text hover:underline">
+				<a href="https://scv1-docs.vercel.app/docs/intro/" className="m-2 font-semibold text-default-bt-text hover:underline">
 				  About Us
 				</a>
 			  </footer>

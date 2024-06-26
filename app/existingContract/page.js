@@ -11,7 +11,7 @@ import { faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import {smartCrowContract, smartCrowABI } from '../projectConfig';
 import { USDTcontract,DAIcontract,USDCcontract,WBTCcontract,WETHcontract, NativeContract } from '../projectConfig';
 import { USDTmultiplier, DAImultiplier,USDCmultiplier,WBTCmultiplier,WETHmultiplier, Nativemultiplier } from '../projectConfig';
-import { chainlinkSubscriptionID, backend_API_URL } from '../projectConfig';
+import { encryptedSecretsUrls, backend_API_URL } from '../projectConfig';
 
 const NFTcontract=smartCrowContract;
 const myabi = smartCrowABI;
@@ -48,8 +48,6 @@ async function withdrawSenderFunds(APN, senderaccount, receiveraccount) {
   MyContract = new ethers.Contract(NFTcontract, myabi, signer);
   console.log(MyContract);
   var mygaslimit = 100000;
-  //var gasest = await MyContract.estimateGas.withdrawFundsSender(senderaccount, receiveraccount,APN);
-  //console.log(gasest);
   const result = await MyContract.withdrawFundsSender(senderaccount, receiveraccount,APN);//,{gasLimit: mygaslimit});
   
   console.log(result);
@@ -83,9 +81,8 @@ async function sendRequestChainlinkSubscription(APN, senderaccount, receiveracco
     
   MyContract = new ethers.Contract(NFTcontract, myabi, signer);
   console.log(MyContract);
+  const result = await MyContract.sendRequest(encryptedSecretsUrls, stringArray);
 
-  const result = await MyContract.sendRequest(chainlinkSubscriptionID, stringArray);
-  
   console.log(result);
 
 	return result
@@ -137,8 +134,8 @@ function delay(ms) {
     // Call the contract to Send request to Chainlink functions and update
     await sendRequestChainlinkSubscription(APN, senderwallet, receiverwallet);
 
-        // Wait for 10 seconds
-        await delay(10000);
+        // Wait for 20 seconds
+        await delay(20000);
 
     // await withdrawSenderFunds(APN, senderwallet, receiverwallet);
 
@@ -191,8 +188,8 @@ function delay(ms) {
     // Call the contract to Send request to Chainlink functions and update
     await sendRequestChainlinkSubscription(APN, senderwallet, receiverwallet);
 
-            // Wait for 10 seconds
-            await delay(10000);
+            // Wait for 20 seconds
+            await delay(20000);
 
     // await withdrawReceiverFunds(APN, senderwallet, receiverwallet);
     
