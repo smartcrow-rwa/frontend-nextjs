@@ -1,7 +1,7 @@
 export const smartCrowContract = process.env.NEXT_PUBLIC_SMARTCROW_CONTRACT;
-export const GOOGLE_API_KEY=process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
-export const PROPERTY_API_KEY=process.env.NEXT_PUBLIC_PROPERTY_API_KEY;
-export const RENTCAST_KEY=process.env.NEXT_PUBLIC_RENTCAST_KEY;
+export const GOOGLE_API_KEY=process.env.GOOGLE_API_KEY;
+export const PROPERTY_API_KEY=process.env.PROPERTY_API_KEY;
+export const RENTCAST_KEY=process.env.RENTCAST_KEY;
 export const backend_API_URL=process.env.NEXT_PUBLIC_BACKEND_API_URL;
 export const backend_EMAIL_URL=process.env.NEXT_PUBLIC_BACKEND_EMAIL_URL;
 

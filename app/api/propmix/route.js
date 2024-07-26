@@ -5,7 +5,7 @@ export async function GET(NextRequest){
     //streetAddress, 
     //postalCode, 
     //orderId) {
-        const accessToken = process.env.NEXT_PUBLIC_PROPERTY_API_KEY;
+        const accessToken = process.env.PROPERTY_API_KEY;
         const apiUrl = 'https://api.propmix.io/pubrec/assessor/v1/GetPropertyDetails';
         const url = NextRequest.nextUrl;//.nextUrl;
         //console.log(url);
