@@ -88,35 +88,35 @@ export default function Home() {
 
 	}
 
-	// const getPropertyDetails = async(
-	// 	accessToken, 
-	// 	streetAddress, 
-	// 	postalCode, 
-	// 	orderId) => {
-	// 		console.log('Checking propmix');
-	// 		  const headers = {
-	// 			  'Access-Token': PROPERTY_API_KEY,
-	// 			};
+	const getPropertyDetails = async(
+		accessToken, 
+		streetAddress, 
+		postalCode, 
+		orderId) => {
+			console.log('Checking propmix');
+			  const headers = {
+				  'Access-Token': PROPERTY_API_KEY,
+				};
 				
-	// 			// Define query parameters
-	// 			const params = {
-	// 			  OrderId: orderId,
-	// 			  StreetAddress: streetaddress,
-	// 			  PostalCode: zipcode,
-	// 			};
+				// Define query parameters
+				const params = {
+				  OrderId: orderId,
+				  StreetAddress: streetaddress,
+				  PostalCode: zipcode,
+				};
 				
-	// 			// Make the API call using Axios
-	// 			axios
-	// 			  .get(apiUrl, { headers, params })
-	// 			  .then((response) => {
-	// 				// Handle the API response
-	// 				console.log('API Response:', response.data);
-	// 			  })
-	// 			  .catch((error) => {
-	// 				// Handle errors
-	// 				console.error('Error calling API:', error.message);
-	// 			  });
-	//   }
+				// Make the API call using Axios
+				axios
+				  .get(apiUrl, { headers, params })
+				  .then((response) => {
+					// Handle the API response
+					console.log('API Response:', response.data);
+				  })
+				  .catch((error) => {
+					// Handle errors
+					console.error('Error calling API:', error.message);
+				  });
+	  }
 	  
 
 	const disconnect = async () => {
